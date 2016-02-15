@@ -1,0 +1,78 @@
+{
+  "name": "viewerjs",
+  "description": "JavaScript image viewer.",
+  "version": "0.3.1",
+  "main": "dist/viewer.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fengyuanchen/viewerjs.git"
+  },
+  "homepage": "http://fengyuanchen.github.io/viewerjs",
+  "author": {
+    "name": "Fengyuan Chen",
+    "url": "http://chenfengyuan.com"
+  },
+  "keywords": [
+    "image",
+    "view",
+    "viewer",
+    "viewerjs",
+    "viewer.js",
+    "html",
+    "css",
+    "javascript",
+    "front-end",
+    "web",
+    "component",
+    "development"
+  ],
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-csscomb": "^3.0.6",
+    "gulp-csslint": "^0.2.0",
+    "gulp-htmlcomb": "^0.1.0",
+    "gulp-jscs": "^3.0.2",
+    "gulp-jshint": "^1.12.0",
+    "gulp-load-plugins": "^1.2.0",
+    "gulp-minify-css": "^1.2.3",
+    "gulp-qunit": "^1.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-sass": "^2.1.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.1"
+  },
+  "gitHead": "53169beda54dd07ccd92b6b1b1d24cf920bc1cc7",
+  "bugs": {
+    "url": "https://github.com/fengyuanchen/viewerjs/issues"
+  },
+  "_id": "viewerjs@0.3.1",
+  "scripts": {},
+  "_shasum": "26101c0b7ca54fb219d21ee615afee6185261bdf",
+  "_from": "viewerjs@*",
+  "_npmVersion": "3.5.2",
+  "_nodeVersion": "5.3.0",
+  "_npmUser": {
+    "name": "fengyuanchen",
+    "email": "cfy.org@gmail.com"
+  },
+  "dist": {
+    "shasum": "26101c0b7ca54fb219d21ee615afee6185261bdf",
+    "tarball": "http://registry.npmjs.org/viewerjs/-/viewerjs-0.3.1.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "fengyuanchen",
+      "email": "cfy.org@gmail.com"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-6-west.internal.npmjs.com",
+    "tmp": "tmp/viewerjs-0.3.1.tgz_1454481428765_0.3354681527707726"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/viewerjs/-/viewerjs-0.3.1.tgz"
+}
