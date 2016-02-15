@@ -30,7 +30,7 @@ use yii\bootstrap\Collapse;
             ],
             // another group item
             [
-                'label' => 'II.- Equipo de Administración del SGA',
+                'label' => 'II.- Área de Gestión Ambiental',
                 'content' => 'Compuesto por un grupo multidisciplinario de profesionales y estudiantes (que realizan su servicio social o
             prácticas profesionales) en constante formación sobre temática ambiental.
             <strong>Responsabilidades:</strong><br>

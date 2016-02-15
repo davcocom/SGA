@@ -527,7 +527,7 @@ $template = [
 
 $items = [
     [
-        'label' => 'Equipo de Administración',
+        'label' => 'Área de Gestión Ambiental',
         'items' => [
             [
                 'label' => '<i class="glyphicon glyphicon-chevron-right"></i> Directivos',
@@ -538,7 +538,7 @@ $items = [
                 'active' => true
             ],
             [
-                'label' => '<i class="glyphicon glyphicon-chevron-right"></i> Equipo de Administración del SGA',
+                'label' => '<i class="glyphicon glyphicon-chevron-right"></i> Equipo del Área de Gestión Ambiental',
                 'encode' => false,
                 'content' => $this->render('contacts', [
                     'people' => $sgaTeam

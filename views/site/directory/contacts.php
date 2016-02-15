@@ -8,9 +8,11 @@
 ?>
 
 <div class="row">
-<?php foreach($people as $person):?>
+<?php
+$counter = 0;
+foreach($people as $person):?>
     <div class="col-lg-3">
-        <div class="iconbox wow slideInUp">
+        <div class="iconbox wow slideInUp" data-wow-delay=".<?=$counter?>s">
             <div class="iconbox-text">
                 <h3 class="iconbox-title"><?=$person['name']?></h3>
                 <div class="iconbox-desc">
@@ -21,5 +23,7 @@
             </div>
         </div>
     </div>
-<?php endforeach;?>
+<?php
+$counter++;
+endforeach;?>
 </div>
