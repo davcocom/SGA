@@ -6,7 +6,7 @@
  * Time: 12:45 PM
  */
 use yii\helpers\Html;
-
+use yii\helpers\Json;
 ?>
 <div class="row" style="margin: 1em 0; padding: 0">
     <h3 class="pfblock-title" style="margin: 2em 0">Formación Profesional y Ciudadana</h3>
@@ -33,11 +33,25 @@ use yii\helpers\Html;
     </div>
 </div>
 
-<div id="images_actions_professional">
-    <div><?= Html::img('images/actions/professionalTraining/01.jpg') ?></div>
-    <div><?= Html::img('images/actions/professionalTraining/02.jpg') ?></div>
-    <div><?= Html::img('images/actions/professionalTraining/03.jpg') ?></div>
-    <div><?= Html::img('images/actions/professionalTraining/04.jpg') ?></div>
-    <div><?= Html::img('images/actions/professionalTraining/05.jpg') ?></div>
-</div>
+<?php
+$albumId = '72157664120971319';
+$url = 'https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=2aecb76609c580f665d53b8c7d37d2bb&photoset_id=' . $albumId . '&user_id=140277175%40N03&format=json&nojsoncallback=1';
 
+$json = file_get_contents($url);
+$obj = Json::decode($json);
+?>
+<?php if (isset($obj['message'])){
+    echo '<p>' . $obj['message'] . '</p>';
+}else{ ?>
+<div id="images_actions_professional">
+    <?php
+    $photos = $obj['photoset']['photo'];
+    $randomImages = count($photos) >= 10 ? array_rand($photos, 10): array_rand($photos, count($photos));
+
+    foreach ($randomImages as $i) {
+        echo '<div>' . Html::img('https://farm' . $photos[$i]['farm'] . '.staticflickr.com/' . $photos[$i]['server'] .
+                '/' . $photos[$i]['id'] . '_' . $photos[$i]['secret']  . '.jpg') . '</div>';
+    }
+    }
+    ?>
+</div>

@@ -71,7 +71,7 @@ AppAsset::register($this);
             ['label' => 'Acerca', 'url' => '#about'],
             ['label' => 'Sistema de Gestión Ambiental', 'url' => '#sga'],
                 ['label' => 'Directorio', 'url' => '#directory'],
-            ['label' => 'Servicio Social', 'url' => '#socialService'],
+            ['label' => '¡Únete!', 'url' => '#socialService'],
             ['label' => 'Sitios de Interés', 'url' => '#otherSites'],
             ['label' => 'Diplomado', 'url' => '#training'],
             ['label' => 'Procedimientos Y Fotmatos', 'url' => '#proceduresAndFormats'],
@@ -92,14 +92,12 @@ AppAsset::register($this);
             <div class="col-sm-12">
 
                 <ul class="social-links">
-                    <li><a href="https://www.facebook.com/sga.uady" class="wow fadeInUp"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="https://twitter.com/ambientaluady" class="wow fadeInUp" data-wow-delay=".1s"><i
+                    <li><a href="https://www.facebook.com/sga.uady" title="Facebook" data-toggle="tooltip" class="wow fadeInUp"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/ambientaluady" title="Twitter" data-toggle="tooltip" class="wow fadeInUp" data-wow-delay=".1s"><i
                                 class="fa fa-twitter"></i></a></li>
-                    <li><a href="index.html#" class="wow fadeInUp" data-wow-delay=".2s"><i
-                                class="fa fa-google-plus"></i></a></li>
-                    <li><a href="index.html#" class="wow fadeInUp" data-wow-delay=".4s"><i class="fa fa-pinterest"></i></a>
+                    <li><a href="https://www.flickr.com/people/140277175@N03/" class="wow fadeInUp" data-wow-delay=".4s" title="Flickr" data-toggle="tooltip"><i class="fa fa-flickr"></i></a>
                     </li>
-                    <li><a href="mailto:ambiental@correo.uady.mx" class="wow fadeInUp" data-wow-delay=".5s"><i
+                    <li><a href="mailto:ambiental@correo.uady.mx" title="Contacto" data-toggle="tooltip" class="wow fadeInUp" data-wow-delay=".5s"><i
                                 class="fa fa-envelope"></i></a></li>
                 </ul>
 
@@ -123,18 +121,13 @@ AppAsset::register($this);
                 ambiental@correo.uady.mx<br>
             </div>
         </div>
-            <p class="copyright" style="margin: 1em 0">© Todos los Derechos Reservados Dirección General de Planeación y Efectividad
+            <p class="copyright" style="margin-top: 1em">© Todos los Derechos Reservados Dirección General de Planeación y Efectividad
                 Institucional, UADY <?= date("Y"); ?>. Esta página puede ser reproducida con fines no lucrativos,
                 siempre y cuando no se mutile, se cite la fuente completa y su dirección
                 electrónica,
                 de otra forma requiere permiso previo por escrito de la institución.</p>
     </div><!-- .container -->
 </footer>
-<script>
-    $(document).ready(function(){
-        $(".owl-carousel").owlCarousel();
-    });
-</script>
 <?php $this->endBody() ?>
 </body>
 </html>

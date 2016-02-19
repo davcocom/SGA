@@ -33,7 +33,7 @@ use yii\helpers\Url;
         <p class="pfblock-title">OBJETIVOS ESPECÍFICOS</p>
         <p>Siguiendo con el marco del Programa Integrador Responsabilidad Social Universitaria, el Programa de
             Gestión del Medio Ambiente pretende:</p>
-        <!--
+
         <div id="communityInfo" class="owl-carousel">
             <div>
                 <p>
@@ -71,9 +71,9 @@ use yii\helpers\Url;
             </div>
         </div>
     </div>
-        -->
+
 </div>
-</div>
+
 <div class="row" style="background-color: #3c3c3c;">
     <p class="pfblock-title text-center">
         LICENCIATURAS PARTICIPANTES

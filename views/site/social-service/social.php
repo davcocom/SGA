@@ -32,7 +32,7 @@ $items = [
             <div class="col-md-12 col-lg-12">
                 <h2 class="wow slideInRight" data-wow-delay=".1s">¿QUIERES FORMAR PARTE DEL CAMBIO?</h2>
                 <div class="calltoaction-decription wow slideInRight" data-wow-delay=".2s">
-                    ¡Forma parte de nuestro equipo de trabajo como prestador de Servicio Social!
+                    ¡Únete a nuestro equipo de trabajo como parte de la Comunidad Ambiental o Voluntariado!
                 </div>
             </div>
         </div><!-- .row -->
