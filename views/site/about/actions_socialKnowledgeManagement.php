@@ -10,8 +10,17 @@ use yii\helpers\Html;
 
 ?>
 <div class="row">
-    <div class="col-lg-3">
-
+    <h3 class="pfblock-title" style="margin: 2em 0">Gestión Social del Conocimiento</h3>
+    <div class="col-lg-10">
+        <p class="text-justify">
+            Al finalizar 2015 la Universidad cuenta con
+            65 Cuerpos Académicos (CA), de los cuales 20
+            corresponden a temas de medio ambiente y
+            sustentabilidad. La totalidad de cuerpos académicos tienen
+            95 Líneas de Generación y Aplicación del Conocimiento
+            (LGAC), y 24 de estas líneas están relacionadas con la
+            temática ambiental.
+        </p>
     </div>
 </div>
 

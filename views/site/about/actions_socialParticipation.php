@@ -10,9 +10,40 @@ use yii\helpers\Json;
 
 ?>
 
-<div class="row">
-    <div>
+<div class="row text-justify" style="margin: 1em 0; padding: 0">
+    <h3 class="pfblock-title" style="margin: 2em 0">Participación social</h3>
+    <div class="col-lg-3">
+        Corresponde a la Participación Social
+        y en él se ubican las actividades que desarrolla el
+        Voluntariado Ambiental UADY (VA UADY) cuyo objetivo es promover una cultura ambiental,
+        tanto en la comunidad universitaria como en la sociedad
+        general, y crear una conciencia colectiva de bienestar
+        ambiental y buenos hábitos, mediante actividades de concientización.
+    </div>
 
+    <div class="col-lg-3">
+        Se han realizado actividades varias, entre ellas la Segunda Rodada
+        Ambiental, con motivo del Día Mundial del Medio Ambiente,
+        y se contó con la participación de diversos grupos
+        estudiantiles, entre ellos, SEBBY, Club de Lectura UADY,
+        FEDY, NFU y Asociación de Scouts de México (Provincia
+        Yucatán).
+    </div>
+
+    <div class="col-lg-3">
+        Es destacable el proyecto “Ya´ax Balam”, que
+        consiste en acudir a alguna población del estado, donde
+        exista una necesidad relacionada con la cultura ambiental y
+        realizar actividades para crear conciencia en cuanto a la
+        protección del ambiente, con la participación directa de la
+        comunidad.
+    </div>
+
+    <div class="col-lg-3">
+        Es importante destacar que el Voluntariado Ambiental UADY fue uno de los ganadores del
+        concurso nacional “Rompe con el Cambio Climático 2015”, organizado por la Secretaría de Medio Ambiente
+        y Recursos Naturales (Semarnat). Cuyo objetivo fue reconocer y promover la participación de los jóvenes
+        mexicanos en acciones que contribuyan a fortalecer una cultura ambiental desde sus entornos socio-culturales.
     </div>
 </div>
 
@@ -29,7 +60,7 @@ $obj = Json::decode($json);
 <div id="images_actions_social">
     <?php
     $photos = $obj['photoset']['photo'];
-    $randomImages = count($photos) >= 10 ? array_rand($photos, 10) : array_rand($photos, count($photos));
+    $randomImages = count($photos) >= 7 ? array_rand($photos, 7) : array_rand($photos, count($photos));
 
     foreach ($randomImages as $i) {
         echo '<div>' . Html::img('https://farm' . $photos[$i]['farm'] . '.staticflickr.com/' . $photos[$i]['server'] .
@@ -37,5 +68,14 @@ $obj = Json::decode($json);
     }
     }
     ?>
+</div>
+<div class="row">
+    <?= Html::img('images/flickr_logo.png', ['class' => 'col-xs-1']); ?>
+    <div class="col-lg-offset-10">
+        <a class="btn" href="https://www.flickr.com/photos/96169295@N03/albums/<?= $albumId ?>" target="_blank">
+            <span class="fa fa-folder-open-o"></span>
+            Ver más
+        </a>
+    </div>
 </div>
 

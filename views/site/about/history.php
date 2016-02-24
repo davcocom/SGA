@@ -58,5 +58,15 @@ use yii\helpers\Html;
             </div>
         </div>
 
+        <div class="owl-item">
+            <div class="col-lg-4 col-lg-offset-2">
+                <?= Html::img('images/sga-logo.png') ?>
+            </div>
+            <div class="col-lg-4">
+                <p>Como parte de la actualizacion del PDI 2014 - 2022 el programa toma el nombre de
+                    "Programa institucional Prioritario De Gestión del Medio Ambiente"</p>
+            </div>
+        </div>
+
     </div>
 </div>

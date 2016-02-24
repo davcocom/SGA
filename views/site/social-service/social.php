@@ -13,7 +13,7 @@ use kartik\tabs\TabsX;
 
 $items = [
     [
-        'label'=>'Servicio social',
+        'label'=>'Servicio Social y Practicas Profesionales',
         'content'=>$this->render('community'),
         'active'=>true,
     ],
@@ -25,7 +25,7 @@ $items = [
 // Above
 ?>
 <section class="calltoaction">
-    <div class="container">
+    <div id="social" class="container">
 
         <div class="row">
 

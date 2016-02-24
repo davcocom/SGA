@@ -95,3 +95,12 @@ use yii\helpers\Json;
     </div>
 
 </div>
+<div class="row">
+    <?= Html::img('images/flickr_logo.png', ['class' => 'col-xs-1']); ?>
+    <div class="col-lg-offset-10">
+        <a class="btn" href="https://www.flickr.com/photos/96169295@N03/albums/<?= $albumId ?>" target="_blank">
+            <span class="fa fa-folder-open-o"></span>
+            Ver más
+        </a>
+    </div>
+</div>

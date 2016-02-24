@@ -28,6 +28,6 @@
     <?= $this->render('training/training') ?>
 </section>
 
-<section id="proceduresAndFormats" class="pfblock pfblock-gray">
+<section id="proceduresAndFormats" class="pfblock pfblock-image">
     <?= $this->render('procedures-formats/procedures') ?>
 </section>

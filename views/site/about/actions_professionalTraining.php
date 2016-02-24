@@ -46,7 +46,7 @@ $obj = Json::decode($json);
 <div id="images_actions_professional">
     <?php
     $photos = $obj['photoset']['photo'];
-    $randomImages = count($photos) >= 10 ? array_rand($photos, 10): array_rand($photos, count($photos));
+    $randomImages = count($photos) >= 7 ? array_rand($photos, 7): array_rand($photos, count($photos));
 
     foreach ($randomImages as $i) {
         echo '<div>' . Html::img('https://farm' . $photos[$i]['farm'] . '.staticflickr.com/' . $photos[$i]['server'] .
@@ -54,4 +54,13 @@ $obj = Json::decode($json);
     }
     }
     ?>
+</div>
+<div class="row">
+    <?= Html::img('images/flickr_logo.png', ['class' => 'col-xs-1']); ?>
+    <div class="col-lg-offset-10">
+        <a class="btn" href="https://www.flickr.com/photos/96169295@N03/albums/<?= $albumId ?>" target="_blank">
+            <span class="fa fa-folder-open-o"></span>
+            Ver más
+        </a>
+    </div>
 </div>

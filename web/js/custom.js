@@ -170,6 +170,9 @@
 
         $('[data-toggle="tooltip"]').tooltip();
 
+        $('.calltoaction').parallax();
+
+        $('#proceduresAndFormats').parallax();
 
         $('#communityInfo').owlCarousel({
             autoPlay: 6000, //Set AutoPlay to 3 seconds
@@ -223,12 +226,12 @@
         var Viewer = window.Viewer;
         var options = {
             // inline: true,
-            movable:false,
+            movable: false,
             zoomable: false,
-            rotatable:false,
-            scalable:false,
-            fullscreen:false,
-            title:0,
+            rotatable: false,
+            scalable: false,
+            fullscreen: false,
+            title: 0,
             url: 'data-original',
             build: function (e) {
                 console.log(e.type);

@@ -6,7 +6,7 @@
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
-use yii\widgets\Breadcrumbs;
+use yii\helpers\Url;
 use app\assets\AppAsset;
 
 AppAsset::register($this);
@@ -17,7 +17,8 @@ AppAsset::register($this);
 <head>
     <meta charset="<?= Yii::$app->charset ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="<?=\yii\helpers\Url::to('owlcarousel/owl.carousel.js')?>"></script>
+    <script src="<?=Url::to('owlcarousel/owl.carousel.js')?>"></script>
+    <link rel="shortcut icon" href="<?Url::to('images/uady-logo.png')?>">
     <?= Html::csrfMetaTags() ?>
     <?php $this->title = 'Sistema de Gestión Ambiental'?>
     <title><?= Html::encode($this->title) ?></title>
