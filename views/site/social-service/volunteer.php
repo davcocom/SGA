@@ -11,8 +11,7 @@ use yii\helpers\Json;
 ?>
 <div class="row info">
     <div class="col-lg-3 wow fadeInUp" style="margin: 10em 0">
-        <?= Html::img('images/voluntariado.png') ?>
-    </div>
+        <img src="images/voluntariado.png" alt=""></div>
 
     <div class="row col-lg-9" style="margin: 2em 0;">
         <div class="col-lg-4">
@@ -71,36 +70,27 @@ use yii\helpers\Json;
         </div>
     </div>
 
-    <?php
-    $albumId = '72157664764124176';
-    $url = 'https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=2aecb76609c580f665d53b8c7d37d2bb&photoset_id=' . $albumId . '&user_id=140277175%40N03&format=json&nojsoncallback=1';
-
-    $json = file_get_contents($url);
-    $obj = Json::decode($json);
-    ?>
-    <?php if (isset($obj['message'])){
-        echo '<p>' . $obj['message'] . '</p>';
-    }else{ ?>
     <div id="images_actions_volunteer">
-        <?php
-        $photos = $obj['photoset']['photo'];
-        $randomImages = array_rand($photos, 10);
-
-        foreach ($randomImages as $i) {
-            echo '<div>' . Html::img('https://farm' . $photos[$i]['farm'] . '.staticflickr.com/' . $photos[$i]['server'] .
-                    '/' . $photos[$i]['id'] . '_' . $photos[$i]['secret'] . '.jpg') . '</div>';
-        }
-        }
-        ?>
+        <div><img src="https://farm2.staticflickr.com/1486/25110020395_d71e5808a0.jpg" alt=""></div>
+        <div><img src="https://farm2.staticflickr.com/1578/25109873515_5aaf74edc6.jpg" alt=""></div>
+        <div><img src="https://farm2.staticflickr.com/1566/25016247511_730c963839.jpg" alt=""></div>
+        <div><img src="https://farm2.staticflickr.com/1636/24991654462_a12f13d4b0.jpg" alt=""></div>
+        <div><img src="https://farm2.staticflickr.com/1654/24991548742_c63b629474.jpg" alt=""></div>
+        <div><img src="https://farm2.staticflickr.com/1582/25016416741_4bd06ae8f4.jpg" alt=""></div>
+        <div><img src="https://farm2.staticflickr.com/1558/24482795313_4d8c86c767.jpg" alt=""></div>
+        <div><img src="https://farm2.staticflickr.com/1681/24478858484_199844e917.jpg" alt=""></div>
+        <div><img src="https://farm2.staticflickr.com/1579/24478847954_9aeb33002f.jpg" alt=""></div>
+        <div><img src="https://farm2.staticflickr.com/1703/25016226391_3d8c1ae4e6.jpg" alt=""></div>
     </div>
 
 </div>
 <div class="row">
-    <?= Html::img('images/flickr_logo.png', ['class' => 'col-xs-1']); ?>
+    <img class="col-xs-1" src="images/flickr_logo.png" alt="">
     <div class="col-lg-offset-10">
-        <a class="btn" href="https://www.flickr.com/photos/96169295@N03/albums/<?= $albumId ?>" target="_blank">
+        <a class="btn" href="https://www.flickr.com/photos/96169295@N03/albums/72157664764124176" target="_blank">
             <span class="fa fa-folder-open-o"></span>
             Ver más
         </a>
     </div>
 </div>
+

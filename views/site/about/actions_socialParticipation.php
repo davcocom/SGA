@@ -5,9 +5,6 @@
  * Date: 12/02/2016
  * Time: 12:55 PM
  */
-use yii\bootstrap\Html;
-use yii\helpers\Json;
-
 ?>
 
 <div class="row text-justify" style="margin: 1em 0; padding: 0">
@@ -47,35 +44,23 @@ use yii\helpers\Json;
     </div>
 </div>
 
-<?php
-$albumId = '72157664242621450';
-$url = 'https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=2aecb76609c580f665d53b8c7d37d2bb&photoset_id=' . $albumId . '&user_id=140277175%40N03&format=json&nojsoncallback=1';
-
-$json = file_get_contents($url);
-$obj = Json::decode($json);
-?>
-<?php if (isset($obj['message'])){
-    echo '<p>' . $obj['message'] . '</p>';
-}else{ ?>
 <div id="images_actions_social">
-    <?php
-    $photos = $obj['photoset']['photo'];
-    $randomImages = count($photos) >= 7 ? array_rand($photos, 7) : array_rand($photos, count($photos));
-
-    foreach ($randomImages as $i) {
-        echo '<div>' . Html::img('https://farm' . $photos[$i]['farm'] . '.staticflickr.com/' . $photos[$i]['server'] .
-                '/' . $photos[$i]['id'] . '_' . $photos[$i]['secret'] . '.jpg') . '</div>';
-    }
-    }
-    ?>
+    <div><img src="https://farm2.staticflickr.com/1442/25109416365_135142e866.jpg" alt=""></div>
+    <div><img src="https://farm2.staticflickr.com/1619/24991211392_8e8cce7708.jpg" alt=""></div>
+    <div><img src="https://farm2.staticflickr.com/1651/25109405215_f7da3326b7.jpg" alt=""></div>
+    <div><img src="https://farm2.staticflickr.com/1577/25109404525_e1afb8edcb.jpg" alt=""></div>
+    <div><img src="https://farm2.staticflickr.com/1685/24482530963_c73d16543e.jpg" alt=""></div>
+    <div><img src="https://farm2.staticflickr.com/1674/25083055696_4ff31f9e70.jpg" alt=""></div>
+    <div><img src="https://farm2.staticflickr.com/1575/24813768020_bff01e8c44.jpg" alt=""></div>
 </div>
 <div class="row">
-    <?= Html::img('images/flickr_logo.png', ['class' => 'col-xs-1']); ?>
+    <img class="col-xs-1" src="images/flickr_logo.png" alt="">
     <div class="col-lg-offset-10">
-        <a class="btn" href="https://www.flickr.com/photos/96169295@N03/albums/<?= $albumId ?>" target="_blank">
+        <a class="btn" href="https://www.flickr.com/photos/96169295@N03/albums/72157664242621450" target="_blank">
             <span class="fa fa-folder-open-o"></span>
             Ver más
         </a>
     </div>
 </div>
+
 

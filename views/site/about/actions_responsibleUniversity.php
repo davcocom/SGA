@@ -9,7 +9,6 @@ use yii\helpers\Html;
 use yii\helpers\Json;
 
 ?>
-
 <div class="row text-justify" style="margin: 1em 0; padding: 0">
     <h3 class="pfblock-title" style="margin: 2em 0">Universidad Responsable</h3>
     <div class="col-lg-6">
@@ -53,35 +52,21 @@ use yii\helpers\Json;
     </div>
 </div>
 
-<?php
-$albumId = '72157664666116041';
-$url = 'https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=2aecb76609c580f665d53b8c7d37d2bb&photoset_id=' . $albumId . '&user_id=140277175%40N03&format=json&nojsoncallback=1';
-
-$json = file_get_contents($url);
-$obj = Json::decode($json);
-?>
-
-<?php if (isset($obj['message'])){
-    echo '<p>' . $obj['message'] . '</p>';
-}else{ ?>
 
 <div id="images_actions_university">
-    <?php
-    $photos = $obj['photoset']['photo'];
-    $randomImages = count($photos) >= 7 ? array_rand($photos, 7) : array_rand($photos, count($photos));
-
-    foreach ($randomImages as $i) {
-        echo '<div>' . Html::img('https://farm' . $photos[$i]['farm'] . '.staticflickr.com/' . $photos[$i]['server'] .
-                '/' . $photos[$i]['id'] . '_' . $photos[$i]['secret'] . '.jpg') . '</div>';
-    }
-    }
-    ?>
+    <div><img src="https://farm2.staticflickr.com/1549/24991172392_68c1d8a79f.jpg" alt=""></div>
+    <div><img src="https://farm2.staticflickr.com/1615/24991170462_6184a7e3bc.jpg" alt=""></div>
+    <div><img src="https://farm2.staticflickr.com/1448/25083015676_50df28e3a5.jpg" alt=""></div>
+    <div><img src="https://farm2.staticflickr.com/1720/24741674349_aa6ffbe1d7.jpg" alt=""></div>
+    <div><img src="https://farm2.staticflickr.com/1658/25109345145_2f69b2f149.jpg" alt=""></div>
+    <div><img src="https://farm2.staticflickr.com/1447/24764402919_e88618b97e.jpg" alt=""></div>
+    <div><img src="https://farm2.staticflickr.com/1614/25038826771_cefb365e94.jpg" alt=""></div>
 </div>
 
 <div class="row">
-    <?= Html::img('images/flickr_logo.png', ['class' => 'col-xs-1']); ?>
+    <img class="col-xs-1" src="images/flickr_logo.png" alt="">
     <div class="col-lg-offset-10">
-        <a class="btn" href="https://www.flickr.com/photos/96169295@N03/albums/<?= $albumId ?>" target="_blank">
+        <a class="btn" href="https://www.flickr.com/photos/96169295@N03/albums/72157664666116041" target="_blank">
             <span class="fa fa-folder-open-o"></span>
             Ver más
         </a>
